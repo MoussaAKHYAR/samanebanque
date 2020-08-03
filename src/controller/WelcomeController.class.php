@@ -16,8 +16,14 @@ class WelcomeController extends Controller{
     /** 
      * use: localhost/projectName/Welcome/
      */
+    // public function index(){  
+    //     return $this->view->load("welcome/index");   
+    // }  
+    /** 
+     * use: localhost/projectName/Welcome/
+     */
     public function index(){  
-        return $this->view->load("welcome/index");   
+        return $this->view->load("welcome/login");   
     }  
 }
 ?>

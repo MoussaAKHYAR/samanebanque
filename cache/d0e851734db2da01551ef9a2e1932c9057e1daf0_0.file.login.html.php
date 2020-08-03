@@ -1,3 +1,27 @@
+<?php
+/* Smarty version 3.1.30, created on 2020-08-03 19:52:30
+  from "C:\xampp\htdocs\mesprojets\samaneBanque\src\view\welcome\login.html" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_5f284ede254f73_77813206',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'd0e851734db2da01551ef9a2e1932c9057e1daf0' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\mesprojets\\samaneBanque\\src\\view\\welcome\\login.html',
+      1 => 1596477125,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5f284ede254f73_77813206 (Smarty_Internal_Template $_smarty_tpl) {
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -5,12 +29,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" />
-  <link rel="stylesheet" href="{$url_base}public/css/login.css" />
+  <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
+public/css/login.css" />
 </head>
 <body>
-  <form action="{$url_base}login/seConnecter" method="post" name="connexion" id="connexion">
+  <form action="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
+login/seConnecter" method="post" name="connexion" id="connexion">
     <div class="login-div">
-      <div class="logo"><img src="{$url_base}public/image/logo.png" alt="logo banque du peuple" class="image"/></div>
+      <div class="logo"><img src="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
+public/image/logo.png" alt="logo banque du peuple" class="image"/></div>
       <div class="title">Banque du peuple</div>
       <div class="sub-title">connexion</div>
       <div class="fields">
@@ -27,6 +54,10 @@
       </div>
     </div>
   </form>
-<script type="text/javascript" src="{$url_base}public/js/loginjs.js"></script>
+<?php echo '<script'; ?>
+ type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
+public/js/loginjs.js"><?php echo '</script'; ?>
+>
 </body>
-</html>
+</html><?php }
+}

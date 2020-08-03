@@ -10,11 +10,11 @@ class ClientCompteController extends Controller
   }
 
   /**
-    * use: localhost/mesprojets/samaneBanque/client/add
+    * use: localhost/mesprojets/samaneBanque/clientCompte/add
     */
   public function index()
   {
-    
+    return $this->view->load("responsable/index");
   }
 }
 ?>
