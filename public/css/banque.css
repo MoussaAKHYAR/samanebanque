@@ -1,0 +1,308 @@
+/** Mes Outils pour le css **/
+body{
+    background: #791A1A;
+    margin: 20px;
+}
+/** souma sokhla wé flex **/
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+/** pour l'aligne des ecritures**/
+.text-center{
+    text-align: center;
+}
+.text-right{
+    text-align: right;
+}
+.text-left{
+    text-align: left;
+}
+/** pour l'aligne des flex**/
+.flex-center{
+    justify-content: center;
+}
+
+.flex-right{
+    justify-content: right;
+}
+
+.flex-left{
+    justify-content: left;
+}
+.flex-round{
+    justify-content: space-around;
+}
+.flex-row-between{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/** pour l'aligne des items **/
+.item-center{
+    align-items: center;
+}
+
+.item-right{
+    align-items: right;
+}
+
+.item-left{
+    align-items: left;
+}
+.plus-grand{
+    flex:1;
+}
+.bg-white{
+    background-color: #FFF;
+}
+.bg-red{
+    background-color: #791A1A;
+}
+
+#top{
+    height: 60px;
+    border-radius: 3px;
+}
+.padding{
+    padding: 7px;
+}
+
+#left{
+    height: 490px;
+    width: 250px;
+    border-radius: 3px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#contain{
+    margin: 20px 0px 20px 20px;
+    border-radius: 3px;
+}
+
+.footer{
+    height: 30px;
+    border-radius: 3px;
+    padding-top: 3px;
+}
+
+.image{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    padding: 5px;
+}
+
+.title-banque{
+    font-size: 45px;
+    margin-top: 0px;
+    text-shadow: 2px 2px 2px #791A1A;
+}
+.marge{
+    margin: 10px;
+}
+.info-user{
+    margin: 5px;
+}
+.trait{
+    height: 7px;
+    border: none;
+}
+.bg-grey{
+    background-color: rgb(155, 151, 151);
+}
+
+.icone{
+    width: 30px;
+}
+
+.site-bar a{
+    text-decoration: none;
+    color: #000;
+    padding: 10px;
+}
+
+.site-bar ul{
+    padding: 0;
+    list-style: none;
+}
+
+.site-bar li{
+    padding: 10px 0px 10px 50px;
+}
+
+li:hover, li a:hover{
+    background-color: #791A1A;
+    color: #FFF;
+}
+
+.btn{
+    margin: 0px 0px 0px 20px;
+    width: 80%;
+    height: 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.bolt{
+    font-weight: bold;
+}
+
+.item{
+    margin: 15px 35px 15px 35px;
+    color: #FFF;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 5px 20px 5px 20px;
+}
+
+/**
+label[for="ok2"]{
+    margin: 100px;
+}**/
+
+.radio{
+    margin-left: 20px;
+}
+
+.active{
+    border: 3px solid;
+    border-color: #000;
+}
+
+.form-group{
+    margin-top: 10px;
+}
+.input{
+    margin-left: 100px;
+}
+fieldset{
+    width: 350px;
+    margin: 0px 10px 0px 10px;
+}
+
+#valider{
+    padding: 5px 20px;
+    color: #FFF;
+    border-radius: 3px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.search{
+    width: 20px;
+}
+
+.float-right{
+    margin-top: -20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    float: right;
+}
+
+#contenue{
+    margin-left: 20px;
+}
+
+.color-white{
+    color: #FFF;
+}
+.ok{
+    flex:1;
+    background: green;
+    color: #FFF;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    margin: 0px 30px;
+}
+
+/* css du div qui affichera le message success lors de l'ajout */
+/*
+.hidden{
+	visibility: hidden;
+}
+.alert-box{
+	position: absolute;
+	right:0;
+	background-color:#02a602;
+	font-size: 20px;
+	top:10px;
+	padding:15px 40px 15px 15px;
+	color:#ffffff;
+	min-width: 350px;
+	z-index:10;
+}
+.alert-box .close-alert{
+	font-size:20px;
+	position: absolute;
+	right:10px;
+	top:15px;
+	cursor: pointer;
+	z-index: 11;
+}
+.alert-box.show::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom:0;
+	height: 4px;
+	background-color:#0ed40e;
+	width: 100%;
+	box-sizing: border-box;
+	z-index: 11;
+	animation: hideMeter 6s linear;
+}
+@keyframes hideMeter {
+	0%{
+		width: 100%;
+	}
+	100%{
+		width: 0%;
+	}
+}
+.alert-box.show{
+	animation: showAlert 1s ease forwards;
+}
+@keyframes showAlert{
+	0%{
+		transform: translateX(100%);
+	}
+	40%{
+		transform: translateX(-15%);
+	}
+	80%{
+	    transform: translateX(0%);
+	}
+	100%{
+	    transform: translateX(-10px);
+	}
+}
+
+.alert-box.hide{
+	animation: hideAlert 1s ease forwards;
+}
+@keyframes hideAlert{
+	0%{
+		transform: translateX(-10px);
+	}
+	40%{
+		transform: translateX(0%);
+	}
+	80%{
+		transform: translateX(-15%);
+	}
+	100%{
+	    transform: translateX(100%);
+	}
+} */
+
+
+
