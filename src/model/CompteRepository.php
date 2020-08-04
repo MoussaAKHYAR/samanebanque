@@ -9,6 +9,16 @@ class CompteRepository extends Model
   {
     parent::__construct();
   }
+  public function addClient($compte)
+	{
+		if($this->db != null)
+		{
+			$this->db->persist($compte);
+			$this->db->flush();
+
+			return $test->getId();
+		}
+	}
 }
 
 ?>

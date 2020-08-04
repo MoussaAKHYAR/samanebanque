@@ -18,6 +18,11 @@ class PersonneRepository extends Model
 
 			return $test->getId();
 		}
-	}
+  }
+  
+  public function login($username, $password)
+  {
+    return $this->db->createQuery("SELECT p FROM Personne p WHERE p.login ='$username' AND p.password = '$password'")->getResult();
+  }
 }
 ?>
