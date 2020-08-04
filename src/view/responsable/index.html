@@ -70,7 +70,7 @@ if ($_SESSION['nom'] == "") {
             </div>
         </section>
         <section id="contain" class="plus-grand bg-white">
-            <form action="{$url_base}clientCompteController/add" method="POST">
+            <form action="{$url_base}ClientCompte/add" method="POST">
                 <div id="taplap" class="flex-row flex-center">
                     <div class="item bg-red">
                         Client :
@@ -189,7 +189,7 @@ if ($_SESSION['nom'] == "") {
                                     </div>
                                     <div class="form-group flex-row-between">
                                         <label for="">Telephone</label>
-                                        <input type="text" name="telephone" id="telephone"  required />
+                                        <input type="text" name="telephoneP" id="telephoneP"  required />
                                         <span id = "missTelephone"></span>
                                     </div>
                                     <div class="form-group flex-row-between">
@@ -198,7 +198,7 @@ if ($_SESSION['nom'] == "") {
                                     </div>
                                     <div class="form-group flex-row-between">
                                         <label for="">Email (optionnel)</label>
-                                        <input type="email" name="email" id="email"  />
+                                        <input type="emailP" name="emailP" id="emailP"  />
                                     </div>
                                 </fieldset>
                             </div>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2020-08-03 18:40:59
+/* Smarty version 3.1.30, created on 2020-08-04 12:21:14
   from "C:\xampp\htdocs\mesprojets\samaneBanque\src\view\responsable\index.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5f283e1b841ee1_46866631',
+  'unifunc' => 'content_5f29369af12821_08246876',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6e21532884cb9feb2b440b03f0d2d98e90e91470' => 
     array (
       0 => 'C:\\xampp\\htdocs\\mesprojets\\samaneBanque\\src\\view\\responsable\\index.html',
-      1 => 1596472857,
+      1 => 1596536419,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f283e1b841ee1_46866631 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f29369af12821_08246876 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!-- <?php echo '<?php
 ';?>session_start();
@@ -103,7 +103,7 @@ loginController?logout=yes">
         </section>
         <section id="contain" class="plus-grand bg-white">
             <form action="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
-clientCompteController/add" method="POST">
+ClientCompte/add" method="POST">
                 <div id="taplap" class="flex-row flex-center">
                     <div class="item bg-red">
                         Client :
@@ -223,7 +223,7 @@ public/img/search.png" alt="" class="search" onclick="searchValid()" /></a>
                                     </div>
                                     <div class="form-group flex-row-between">
                                         <label for="">Telephone</label>
-                                        <input type="text" name="telephone" id="telephone"  required />
+                                        <input type="text" name="telephoneP" id="telephoneP"  required />
                                         <span id = "missTelephone"></span>
                                     </div>
                                     <div class="form-group flex-row-between">
@@ -232,7 +232,7 @@ public/img/search.png" alt="" class="search" onclick="searchValid()" /></a>
                                     </div>
                                     <div class="form-group flex-row-between">
                                         <label for="">Email (optionnel)</label>
-                                        <input type="email" name="email" id="email"  />
+                                        <input type="emailP" name="emailP" id="emailP"  />
                                     </div>
                                 </fieldset>
                             </div>
