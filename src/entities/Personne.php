@@ -7,7 +7,9 @@ use Doctrine\Common\Collections\ArrayCollection;
  **/
 class Personne
 {
-    /** @Id @Column(type="string") **/
+    /** @Id @Column(type="integer") @GeneratedValue **/
+    private $id;
+    /** @Column(type="string") **/
     private $matricule;
     /** @Column(type="string") **/
     private $cin;
@@ -178,6 +180,16 @@ class Personne
     public function setComptes($comptes)
     {
       $this->comptes = $comptes;
+    }
+    public function getId()
+    {
+        return $this->id;
+    }
+    public function setId($id)
+    {
+        $this->id = $id;
+
+        return $this;
     }
 }
 

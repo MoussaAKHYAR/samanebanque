@@ -1,6 +1,7 @@
 <?php
 
 use libs\system\Controller;
+use src\model\CompteRepository;
 use src\model\PersonneRepository;
 
 class ClientCompteController extends Controller
@@ -24,7 +25,9 @@ class ClientCompteController extends Controller
   public function add()
   {
     extract($_POST);
-    if ($choix_client == 'nouveau') {
+    if(isset($_POST['valider'])){
+      if ($choix_client == 'nouveau') {
+      
       if ($choix_type_client == 'physique') {
         if ($choix_compte == 'simple') {
           $personneRepository = new PersonneRepository();
@@ -39,19 +42,42 @@ class ClientCompteController extends Controller
           $personneObject->setTelephone($telephoneP);
           $personneObject->setAdrPersonne($adrPersonne);
           $personneObject->setEmail($emailP);
-          $personneObject->setLogin(null);
-          $personneObject->setPassword(null);
+          // $personneObject->setLogin(null);
+          // $personneObject->setPassword(null);
           //var_dump($personneObject);
-          $ok = $personneRepository->addClient($personneObject);
-          //var_dump($ok);
-          $data['ok'] = $ok;
+          // $ok = $personneRepository->addClient($personneObject);
+          // var_dump($ok);
+          if (1) {
+            $compte = new Compte();
+              $comptedb = new CompteRepository();
+              $compte->setNumero(codeAleatoire(8));
+              $compte->setPersonne($personneObject);
+              $compte->setRib(15);
+              $compte->setDateOuverture(date("Y-m-d"));
+              $compte->setFraisOuverture(2500);
+              $compte->setRemuneration(1000);
+              $compte->setTypeCompte(2);
+              var_dump($compte);
 
-          var_dump($data);
+              $ok2 = $comptedb->addCompteSimple($compte);
+              //var_dump($compte->getDateOuverture());
+
+              var_dump($ok2);
+              // if ($ok2) {
+              //   echo 11;
+              //   return $this->view->load("typeCompte/add");;
+              // }
+          }
+          //$data['ok'] = $ok;
+
+          //var_dump($data);
 
 
         }
       }
     }
+    }
+    
     
     // $data['ok'] = 0;
     // $personneObject = new Personne();

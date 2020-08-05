@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2020-08-04 12:21:14
+/* Smarty version 3.1.30, created on 2020-08-04 14:45:38
   from "C:\xampp\htdocs\mesprojets\samaneBanque\src\view\responsable\index.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5f29369af12821_08246876',
+  'unifunc' => 'content_5f295872ead737_11492383',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6e21532884cb9feb2b440b03f0d2d98e90e91470' => 
     array (
       0 => 'C:\\xampp\\htdocs\\mesprojets\\samaneBanque\\src\\view\\responsable\\index.html',
-      1 => 1596536419,
+      1 => 1596544723,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f29369af12821_08246876 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f295872ead737_11492383 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!-- <?php echo '<?php
 ';?>session_start();
@@ -325,7 +325,7 @@ public/img/search.png" alt="" class="search" onclick="searchValid()" /></a>
                     </div>
                 </div>
                 <div class="float-right">
-                    <input type="submit" value="Valider" id="valider" class="bg-red"  />
+                    <input type="submit" name="valider" value="Valider" id="valider" class="bg-red"  />
                 </div>
             </form>
         </section>

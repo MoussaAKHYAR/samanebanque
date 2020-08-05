@@ -16,7 +16,7 @@ class PersonneRepository extends Model
 			$this->db->persist($personne);
 			$this->db->flush();
 
-			return $personne->getMatricule();
+			return $personne->getId();
 		}
   }
   

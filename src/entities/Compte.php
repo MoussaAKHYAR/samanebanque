@@ -5,20 +5,23 @@ use Doctrine\ORM\Annotation as ORM;
  * @Entity @Table(name="compte")
  **/
 class Compte{
-  /** @Id @Column(type="string") **/
+
+  /** @Id @Column(type="integer") @GeneratedValue **/
+  private $id;
+  /** @Column(type="string") **/
   private $numero;
   /**
-   * Many comptes have one personne. This is the owning side.
-   * @ManyToOne(targetEntity="Personne", inversedBy="comptes")
-   * @JoinColumn(name="personne_matricule", referencedColumnName="matricule")
-   */
-  private $matricule;
+  * Many compte have one personne. This is the owning side.
+  * @ManyToOne(targetEntity="Personne", inversedBy="comptes",cascade={"persist"})
+  * @JoinColumn(name="personne_id", referencedColumnName="id")
+  */
+  private $personne;
   /**
-   * Many comptes have one entreprise. This is the owning side.
-   * @ManyToOne(targetEntity="Entreprise", inversedBy="comptes")
-   * @JoinColumn(name="entreprise", referencedColumnName="id")
+   * Many compte have one entreprise. This is the owning side.
+   * @ManyToOne(targetEntity="Entreprise", inversedBy="comptes",cascade={"persist"})
+   * @JoinColumn(name="entreprise_id", referencedColumnName="id")
    */
-  private $id;
+  private $entreprise;
   /**
    *@Column(type="string")
    */
@@ -28,7 +31,7 @@ class Compte{
    */
   private $solde;
   /**
-   *@Column(type="date")
+   *@Column(type="string")
    */
   private $dateOuverture;
   /**
@@ -64,11 +67,11 @@ class Compte{
     */
   private $remuneration;
   /**
-    *@Column(type="date")
+    *@Column(type="string")
     */
   private $dateDebut;
   /**
-    *@Column(type="date")
+    *@Column(type="string")
     */
   private $dateFin;
   /**
@@ -253,6 +256,26 @@ class Compte{
   public function setId($id)
   {
     $this->id = $id;
+
+    return $this;
+  }
+  public function getPersonne()
+  {
+    return $this->personne;
+  }
+  public function setPersonne($personne)
+  {
+    $this->personne = $personne;
+
+    return $this;
+  }
+  public function getEntreprise()
+  {
+    return $this->entreprise;
+  }
+  public function setEntreprise($entreprise)
+  {
+    $this->entreprise = $entreprise;
 
     return $this;
   }

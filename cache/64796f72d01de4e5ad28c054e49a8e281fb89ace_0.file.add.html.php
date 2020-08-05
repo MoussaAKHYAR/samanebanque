@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2020-08-03 14:26:32
+/* Smarty version 3.1.30, created on 2020-08-04 12:39:56
   from "C:\xampp\htdocs\mesprojets\samaneBanque\src\view\test\add.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5f280278e62413_57117264',
+  'unifunc' => 'content_5f293afc5ecdc0_40558518',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '64796f72d01de4e5ad28c054e49a8e281fb89ace' => 
     array (
       0 => 'C:\\xampp\\htdocs\\mesprojets\\samaneBanque\\src\\view\\test\\add.html',
-      1 => 1589558194,
+      1 => 1596459352,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f280278e62413_57117264 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f293afc5ecdc0_40558518 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <html>
 	<head>
@@ -39,8 +39,8 @@ public/css/samane.css"/>
 		</style>
 	</head>
 	<body>
-		<img src="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
-public/image/logo.jpg" class="resize" />
+		<!-- <img src="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
+public/image/logo.jpg" class="resize" /> -->
 		<div class="nav navbar navbar-default navbar-fixed-top">
 			<ul class="nav navbar-nav">
 				<!-- l'appel de <?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
@@ -53,16 +53,6 @@ Test/index">Menu test page </a></li>
 Test/getId/1">Menu test get id page </a></li>
 				<li><a href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
 Test/liste">Menu test list page </a></li>
-				<li><a href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
-Upload/index">upload file </a></li>
-				<li><a href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
-PdfGenerator/generate">Samane Generate pdf file </a></li>
-				<li><a href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
-ExcelGenerator/generate">Samane Generate excel file </a></li>
-				<li><a href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
-ExcelGenerator/read">Samane read excel file </a></li>
-				<li><a href="<?php echo $_smarty_tpl->tpl_vars['url_base']->value;?>
-Email/sendMail">Samane Mailing </a></li>
 			</ul>
 		</div>
 		<div class="col-md-8 col-xs-12 col-md-offset-2" style="margin-top:150px;">

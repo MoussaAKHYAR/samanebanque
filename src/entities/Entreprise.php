@@ -41,7 +41,7 @@ class Entreprise{
   private $adrEntreprise;
   /**
    *One entreprise has many comptes. This is the inverse side.
-   *@OneToMany(targetEntity="Compte", mappedBy="id")
+   *@OneToMany(targetEntity="Compte", mappedBy="entreprise")
   */
   private $comptes;
 
