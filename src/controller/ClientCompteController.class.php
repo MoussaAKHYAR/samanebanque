@@ -57,50 +57,24 @@ class ClientCompteController extends Controller
               $compte->setFraisOuverture(2500);
               $compte->setRemuneration(1000);
               $compte->setTypeCompte(2);
-              var_dump($compte);
+              //var_dump($compte);
 
               $ok2 = $comptedb->addCompteSimple($compte);
               //var_dump($compte->getDateOuverture());
 
-              var_dump($ok2);
-              // if ($ok2) {
-              //   echo 11;
-              //   return $this->view->load("typeCompte/add");;
-              // }
+              //var_dump($ok2);
+              if ($ok2) {
+                $data['ok'] = $ok2;
+                return $this->view->redirect("ClientCompte/index",$data);;
+              }
+            }
+          }else if($choix_compte == 'courant'){
+            
           }
-          //$data['ok'] = $ok;
-
-          //var_dump($data);
-
-
         }
       }
     }
-    }
-    
-    
-    // $data['ok'] = 0;
-    // $personneObject = new Personne();
-    // $personneObject->setMatricule(codeAleatoire(8));
-    // $personneObject->setCin($cni);
-    // $personneObject->setNom($nom);
-    // $personneObject->setPrenom($prenom);
-    // $personneObject->setSexe($sexe);
-    // $personneObject->setDateNaiss($dateNaiss);
-    // $personneObject->setTelephone($telephone);
-    // $personneObject->setAdrPersonne($adrPersonne);
-    // $personneObject->setEmail($email);
-    // $personneObject->setLogin(null);
-    // $personneObject->setPassword(null);
 
-    // $ok = $personneRepository->addClient($personneObject);
-    // $data['ok'] = $ok;
-
-    // var_dump($data);
-    //return $this->view->load("test/add", $data);
-    //   else{
-    //         return $this->view->load("test/add");
-    // }
   }
 }
   function codeAleatoire($car)
